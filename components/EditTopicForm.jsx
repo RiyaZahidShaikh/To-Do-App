@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { Input } from "@/components/ui/input";
 
 export default function EditTopicForm({ id, title, description}) {
   const [newTitle, setNewTitle] = useState(title);
@@ -34,14 +35,14 @@ export default function EditTopicForm({ id, title, description}) {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-      <input
+      <Input
         onChange={(e) => setNewTitle(e.target.value)}
         value={newTitle}
         className="border border-slate-500 px-8 py-2 mt-2"
         type="text"
         placeholder="Topic Title"
       />
-      <input
+      <Input
         onChange={(e) => setNewDescription(e.target.value)}
         value={newDescription}
         className="border border-slate-500 px-8 py-2"
@@ -50,7 +51,7 @@ export default function EditTopicForm({ id, title, description}) {
       />
       <button
         type="submit"
-        className="bg-green-600 font-bold text-white py-3 px-6 w-fit"
+        className="bg-[#e2b9bd] rounded-lg font-bold text-white py-3 px-6 w-fit"
       >
         Update Topic
       </button>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { Input } from "@/components/ui/input";
 
 export default function AddTopic() {
   const [title, setTitle] = useState("");
@@ -39,21 +40,21 @@ export default function AddTopic() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-      <input
+      <Input
         onChange={(e) => setTitle(e.target.value)}
         value={title}
         className="border border-slate-500 px-8 py-2 mt-2"
         type="text"
         placeholder="Topic Title"
       />
-      <input
+      <Input
         onChange={(e) => setDescription(e.target.value)}
         value={description}
         className="border border-slate-500 px-8 py-2"
         type="text"
         placeholder="Topic Description"
       />
-      <button type="submit" className="bg-green-600 font-bold text-white py-3 px-6 w-fit">
+      <button type="submit" className="bg-[#e2b9bd] rounded-lg font-bold text-white py-3 px-6 w-fit">
         Add Topic
       </button>
     </form>
