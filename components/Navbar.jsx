@@ -14,7 +14,7 @@ export default function Navbar(){
             <Link className="font-bold" href={'/'}>ToDo</Link>
             </div>
             {/* <Link className="bg-white p-2" href={'/addTopic'}>Add Topic</Link> */}
-            <Link className={buttonVariants({ variant: "outline" })} href={'/addTopic'}>Add Topic</Link>
+            <Link className={buttonVariants({ variant: "outline" })} href={'/addTopic'}>Add Task</Link>
             
 
         </nav>

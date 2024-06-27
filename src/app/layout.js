@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -13,13 +14,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-      <div class="bg-back bg-cover bg-center h-screen">
+      <div class="bg-mount bg-cover bg-center min-h-screen">
         <div className="max-w-3xl mx-auto p-4">
           <Navbar />
           <div className="mt-8">
           {children}
           </div>
         </div>
+        <Footer/>
         </div>
       </body>
     </html>

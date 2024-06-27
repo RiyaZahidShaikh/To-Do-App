@@ -73,7 +73,14 @@ module.exports = {
       },
       backgroundImage: {
         'i1': "url('./images/4.jpeg')",
-        'back': "url('./images/back.jpeg')"
+        'back': "url('./images/back.jpeg')",
+        'loft': "url('./images/loft.jpeg')",
+        'mount': "url('./images/mount.jpeg')",
+        // 'gojo': "url('./images/new/gojo.jpeg')",
+        // 'suzume': "url('./images/new/suzume.jpeg')",
+        // 'frog': "url('./images/new/frog.jpeg')",
+        // 'music': "url('./images/new/music.jpeg')",
+        // 'night': "url('./images/new/Night Beach.jpeg')",
       },
     },
   },

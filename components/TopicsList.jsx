@@ -13,7 +13,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-
 const getTopics = async () => {
   try {
     const res = await fetch("http://localhost:3000/api/topics", {
@@ -32,42 +31,35 @@ const getTopics = async () => {
 
 export default async function TopicsList() {
   const { topics } = await getTopics();
- 
+  const date = new Date();
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
 
   return (
     <>
-    <div className="flex flex-wrap gap-2">
-      {topics.map((t) => (
-        // <div className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start">
-        //     <div>
-        //         <h2 className="font-bold text-2xl">{t.title}</h2>
-        //         <div>{t.description}</div>
-        //     </div>
-        //     <div className="flex gap-2">
-        //         <RemoveBtn id={t._id}/>
-        //         <Link href={`/editTopic/${t._id}`}>
-        //         <HiPencilAlt size={24}/>
-        //         </Link>
-        //     </div>
-        // </div>
-         
-        <Card>
-          <CardHeader>
-            <CardTitle>{t.title}</CardTitle>
-            <CardDescription>{t.description}</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="flex justify-end gap-2">
-              <RemoveBtn id={t._id} />
-              <Link href={`/editTopic/${t._id}`}>
-                <HiPencilAlt size={24} />
-              </Link>
-            </div>
-          </CardContent>
-        </Card>
-  
-        
-      ))}
+      <div className="flex flex-wrap gap-2">
+        {topics.map((t) => (
+          <Card>
+            <CardHeader>
+              <CardTitle>{t.title}</CardTitle>
+              <CardDescription>{t.description}</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="flex justify-end gap-2">
+                <RemoveBtn id={t._id} />
+                <Link href={`/editTopic/${t._id}`}>
+                  <HiPencilAlt size={24} />
+                </Link>
+              </div>
+            </CardContent>
+            <CardFooter>
+              <p>
+                {day}/{month}/{year}
+              </p>
+            </CardFooter>
+          </Card>
+        ))}
       </div>
     </>
   );

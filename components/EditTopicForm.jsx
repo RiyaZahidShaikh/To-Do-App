@@ -34,7 +34,7 @@ export default function EditTopicForm({ id, title, description}) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-3 h-64">
       <Input
         onChange={(e) => setNewTitle(e.target.value)}
         value={newTitle}
@@ -51,9 +51,9 @@ export default function EditTopicForm({ id, title, description}) {
       />
       <button
         type="submit"
-        className="bg-[#e2b9bd] rounded-lg font-bold text-white py-3 px-6 w-fit"
+        className="bg-[#94b1ff] rounded-lg font-bold text-white py-3 px-6 w-fit"
       >
-        Update Topic
+        Update Task
       </button>
     </form>
   );
