@@ -22,8 +22,10 @@ export default function Footer(){
             <div className="flex justify-start mx-10 items-center">
                 <Link className="pr-4" href={'https://www.linkedin.com/in/riya-shaikh-30713126b'}><FaLinkedin size={30} /></Link>
                 <Link className="pr-4" href={'https://github.com/RiyaZahidShaikh'}><FaGithub size={30} /></Link>
-                {/* <Link href={'https://riyazahidshaikh.official@gmail.com'}><IoIosMail size={30} /></Link> */}
             </div>
+            <div className="flex justify-start mx-10 items-center">
+                <p className="flex justify-start items-center"><IoIosMail size={30} />riyazahidshaikh.official@gmail.com</p>
+            </div>                
         </div>
     )
 }
