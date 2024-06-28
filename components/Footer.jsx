@@ -6,11 +6,12 @@ import { buttonVariants } from "@/components/ui/button";
 import { RiCalendarTodoFill } from "react-icons/ri";
 import { FaRegCopyright } from "react-icons/fa";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
 
 
 export default function Footer(){
     return(
-        <div className= "flex flex-col min-h-72 rounded-lg bg-[#f0d84f] px-8 py-3">
+        <div className= "flex flex-col min-h-72 w-full bg-[#f0d84f] px-8 py-3">
             <div className="flex justify-start my-5 mx-10 items-center text-3xl space-x-2">
             <RiCalendarTodoFill />
             <Link className="font-bold" href={'/'}>ToDo</Link>
@@ -20,7 +21,8 @@ export default function Footer(){
             </div>
             <div className="flex justify-start mx-10 items-center">
                 <Link className="pr-4" href={'https://www.linkedin.com/in/riya-shaikh-30713126b'}><FaLinkedin size={30} /></Link>
-                <Link href={'https://github.com/RiyaZahidShaikh'}><FaGithub size={30} /></Link>
+                <Link className="pr-4" href={'https://github.com/RiyaZahidShaikh'}><FaGithub size={30} /></Link>
+                {/* <Link href={'https://riyazahidshaikh.official@gmail.com'}><IoIosMail size={30} /></Link> */}
             </div>
         </div>
     )

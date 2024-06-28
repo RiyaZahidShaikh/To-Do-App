@@ -45,17 +45,17 @@ export default function AddTopic() {
         value={title}
         className="border border-slate-500 px-8 py-2 mt-2"
         type="text"
-        placeholder="Topic Title"
+        placeholder="Task Title"
       />
       <Input
         onChange={(e) => setDescription(e.target.value)}
         value={description}
         className="border border-slate-500 px-8 py-2"
         type="text"
-        placeholder="Topic Description"
+        placeholder="Task Description"
       />
       <button type="submit" className="bg-[#94b1ff] rounded-lg font-bold text-white py-3 px-6 w-fit">
-        Add Topic
+        Add Task
       </button>
     </form>
   );

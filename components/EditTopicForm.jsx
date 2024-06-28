@@ -40,14 +40,14 @@ export default function EditTopicForm({ id, title, description}) {
         value={newTitle}
         className="border border-slate-500 px-8 py-2 mt-2"
         type="text"
-        placeholder="Topic Title"
+        placeholder="Task Title"
       />
       <Input
         onChange={(e) => setNewDescription(e.target.value)}
         value={newDescription}
         className="border border-slate-500 px-8 py-2"
         type="text"
-        placeholder="Topic Description"
+        placeholder="Task Description"
       />
       <button
         type="submit"

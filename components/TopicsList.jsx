@@ -31,10 +31,10 @@ const getTopics = async () => {
 
 export default async function TopicsList() {
   const { topics } = await getTopics();
-  const date = new Date();
-  const day = date.getDate();
-  const month = date.getMonth() + 1;
-  const year = date.getFullYear();
+  // const date = new Date();
+  // const day = date.getDate();
+  // const month = date.getMonth() + 1;
+  // const year = date.getFullYear();
 
   return (
     <>
@@ -55,7 +55,9 @@ export default async function TopicsList() {
             </CardContent>
             <CardFooter>
               <p>
-                {day}/{month}/{year}
+                {/* {day}/{month}/{year} */}
+                {/* {new Date(t.createdAt).toLocaleDateString()} */}
+                {(!t.updatedAt)?(new Date(t.createdAt).toLocaleDateString()):(new Date(t.updatedAt).toLocaleDateString())}
               </p>
             </CardFooter>
           </Card>

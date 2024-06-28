@@ -14,14 +14,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-      <div class="bg-mount bg-cover bg-center min-h-screen">
-        <div className="max-w-3xl mx-auto p-4">
+      <div class="bg-mount bg-cover bg-center min-h-screen flex flex-col justify-between items-center">
+        <div className="max-w-3xl mx-96 p-4">
           <Navbar />
-          <div className="mt-8">
+          <div className="mt-8 mb-auto">
           {children}
           </div>
-        </div>
-        <Footer/>
+          <div className="mx-96"></div>
+        </div >
+        <Footer className="w-screen"/>
         </div>
       </body>
     </html>
