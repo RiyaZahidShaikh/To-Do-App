@@ -40,7 +40,7 @@ export default async function TopicsList() {
     <>
       <div className="flex flex-wrap gap-2">
         {topics.map((t) => (
-          <Card>
+          <Card className=" hover:shadow-2xl hover:scale-105">
             <CardHeader>
               <CardTitle>{t.title}</CardTitle>
               <CardDescription>{t.description}</CardDescription>
